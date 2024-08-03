@@ -3,7 +3,7 @@
 <div align="center">
   <table width="100%" border="1" cellpadding="10" cellspacing="0">
     <tr style="background-color:#f2f2f2;">
-      <td align="center" colspan="2"><strong>Assignment 1: Threads</strong></td>
+      <td align="center" colspan="2"><strong>Assignment 2: CPU Scheduling.</strong></td>
     </tr>
     <tr>
       <td align="center"><strong>Names:</strong><br>Ahmed Elsayed Moein<br>Ahmed Sami Darwish<br>Abdulrahman Emad Kamel Ismail<br>Mootaz Medhat Ezzat Abdelwahab</td>
@@ -21,67 +21,88 @@
 
 ---
 
-## Assignment #1 (Deadline 18/11/2022)
+## Assignment #2
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
 Operating Systems Course (Spring 2023)
 
-### Description
+---
 
-Given `N` numbers and one file, our system simulates a real-life scenario of how buffering is run where a user will decide N to get the prime numbers from `0` to `N`. Somehow, the producer schedules the primes in a queue, and the consumer will use this queue to write them in the file. The application should use multiple threads to perform multiple actions simultaneously, reducing the time elapsed. 
+### CPU Schedulers Simulator
 
-Note: The Consumer thread will hold a lock when it starts and release it when the ready queue is empty and must notify all other threads.
+Write a Java program to simulate the following schedulers:
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/85490796-7f70-4e9a-aec0-2ea06f380d99" alt="image">
-</div>
+1. **Preemptive Shortest-Job-First (SJF) Scheduling** with context switching.
+2. **Round Robin (RR) Scheduling** with context switching.
+3. **Preemptive Priority Scheduling** (with solving the starvation problem).
+4. **AG Scheduling**:
+   - Each process is provided a static time to execute called quantum.
+   - Once a process is executed for a given time period, it’s called FCFS till the finishing of (ceil(52%)) of its Quantum time, then it’s converted to non-preemptive Priority till the finishing of the next (ceil(52%)), after that it’s converted to preemptive Shortest-Job-First (SJF).
+   - There are 3 scenarios for the running process:
+     1. The running process used all its quantum time and still has job to do (add this process to the end of the queue, then increase its Quantum time by Two).
+     2. The running process was executed as non-preemptive Priority and didn’t use all its quantum time based on another process converted from ready to running (add this process to the end of the queue, and then increase its Quantum time by ceil(the remaining Quantum time/2)).
+     3. The running process was executed as preemptive Shortest-Job-First (SJF) and didn’t use all its quantum time based on another process converted from ready to running (add this process to the end of the queue, and then increase its Quantum time by the remaining Quantum time).
+     4. The running process didn’t use all of its quantum time because it no longer needs that time and the job was completed (set its quantum time to zero).
 
-### Submission Instructions
+```
+Example:
+____________________________________________________________
+| Process | Burst Time | Arrival Time | Priority | Quantum |
+|---------|------------|--------------|----------|---------|
+| P1      | 17         | 0            | 4        | 7       |
+| P2      | 6          | 2            | 7        | 9       |
+| P3      | 11         | 5            | 3        | 4       |
+| P4      | 4          | 15           | 6        | 6       |
+____________________________________________________________
 
-1. Submission deadline: 18/11.
-2. The assignment is to be submitted in groups of a minimum of 3 and a maximum of 4 persons.
-3. Do not use built-in semaphores.
+Answer:
+Quantum (7, 9, 4, 6)     -> ceil(25%) = (2, -, -, -) & ceil(50%) = (4, -, -, -)
+Quantum (7+3, 9, 4, 6)   -> ceil(25%) = (-, 3, -, -) & ceil(50%) = (-, 5, -, -)
+Quantum (10, 9+3, 4, 6)  -> ceil(25%) = (-, -, 1, -) & ceil(50%) = (-, -, 2, -)
+Quantum (10, 12, 4+2, 6) -> ceil(25%) = (-, 3, -, -) & ceil(50%) = (-, 6, -, -)
+Quantum (10, 0, 6, 6)    -> ceil(25%) = (3, -, -, -) & ceil(50%) = (5, -, -, -)
+Quantum (10+4, 0, 6, 6)  -> ceil(25%) = (-, -, 2, -) & ceil(50%) = (-, -, 3, -)
+Quantum (14, 0, 6+3, 6)  -> ceil(25%) = (-, -, -, 2) & ceil(50%) = (-, -, -, 3)
+Quantum (14, 0, 9, 6+2)  -> ceil(25%) = (-, -, 3, -) & ceil(50%) = (-, -, 5, -)
+Quantum (14, 0, 0, 8)    -> ceil(25%) = (4, -, -, -) & ceil(50%) = (7, -, -, -)
+Quantum (14+7, 0, 0, 8)  -> ceil(52%) = (0, 0, 0, 2) & ceil(50%) = (-, -, -, 4)
+Quantum (21, 0, 0, 0)    -> ceil(25%) = (6, -, -, -) & ceil(50%) = (11, -, -, -)
 
-### Grading Criteria
+Execution Order:
+| P1 | P2 | P3 | P2 | P1 | P3 | P4 | P3 | P1 | P4 | P1 |
+|----|----|----|----|----|----|----|----|----|----|----|
+0    4    7    9    12   15   18   20   26   33   35   38
+```
 
-<div align="center">
-  <table width="50%">
-    <tr>
-      <td align="left"><strong>Criteria</strong></td>
-      <td align="right"><strong>Points</strong></td>
-    </tr>
-    <tr>
-      <td align="left">Class producer</td>
-      <td align="right">1</td>
-    </tr>
-    <tr>
-      <td align="left">Class consumer</td>
-      <td align="right">1</td>
-    </tr>
-    <tr>
-      <td align="left">Test cases</td>
-      <td align="right">1</td>
-    </tr>
-    <tr>
-      <td align="left">Handling queue is empty</td>
-      <td align="right">0.5</td>
-    </tr>
-    <tr>
-      <td align="left">Save to file</td>
-      <td align="right">0.5</td>
-    </tr>
-    <tr>
-      <td align="left">Calculate prime number</td>
-      <td align="right">0.5</td>
-    </tr>
-    <tr>
-      <td align="left">Using synchronization</td>
-      <td align="right">0.5</td>
-    </tr>
-    <tr>
-      <td align="left">GUI (real-time update of this GUI)</td>
-      <td align="right">1</td>
-    </tr>
-  </table>
-</div>
+### Program Input
+- Number of processes
+- Round robin Time Quantum
+- Context switching
+
+For each process, you need to receive the following parameters from the user:
+- Process Name
+- Process Arrival Time
+- Process Burst Time
+- Process Priority
+
+### Program Output
+For each scheduler, output the following:
+- Processes execution order
+- Waiting Time for each process
+- Turnaround Time for each process
+- Average Waiting Time
+- Average Turnaround Time
+- Print all history updates of quantum time for each process (AG Scheduling)
+
+### Grading Criteria (BOUNS (15 grades))
+
+|                                    | Preemptive Shortest-Job First (SJF) Scheduling | Round Robin (RR) Scheduling | Priority Scheduling | AG Scheduling | Grade |
+|------------------------------------|-----------------------------------------------|-----------------------------|---------------------|---------------|-------|
+| **Processes execution order**      | 6                                             | 6                           | 6                   | 13            | 31    |
+| **Waiting Time for Each Process**  | 6                                             | 6                           | 6                   | 13            | 31    |
+| **Turnaround Time for Each Process**| 2                                            | 2                           | 2                   | 4             | 10    |
+| **Average Waiting Time**           | 2                                             | 2                           | 2                   | 4             | 10    |
+| **Average Turnaround Time**        | 2                                             | 2                           | 2                   | 4             | 10    |
+| **Print All History Update of Quantum Time for Each Process** | 0                    | 0                           | 0                   | 8             | 8     |
+| **Grade**                          | **18**                                        | **18**                      | **18**              | **46**        | **100**|
