@@ -6,12 +6,12 @@
       <td align="center" colspan="2"><strong>Assignment 1: Threads</strong></td>
     </tr>
     <tr>
-      <td align="center"><strong>Names</strong><br>Ahmed Elsayed Moein<br>Ahmed Sami Darwish<br>Abdulrahman Emad Kamel Ismail<br>Mootaz Medhat Ezzat Abdelwahab</td>
-      <td align="center"><strong>IDs</strong><br>20206120<br>20206136<br>20206148<br>20206074</td>
+      <td align="center"><strong>Names:</strong><br>Ahmed Elsayed Moein<br>Ahmed Sami Darwish<br>Abdulrahman Emad Kamel Ismail<br>Mootaz Medhat Ezzat Abdelwahab</td>
+      <td align="center"><strong>IDs:</strong><br>20206120<br>20206136<br>20206148<br>20206074</td>
     </tr>
     <tr style="background-color:#f9f9f9;">
-      <td align="center"><strong>Program</strong><br>Software Engineering</td>
-      <td align="center"><strong>Group</strong><br>B (S5)</td>
+      <td align="center"><strong>Program:</strong><br>Software Engineering</td>
+      <td align="center"><strong>Group:</strong><br>B (S5)</td>
     </tr>
     <tr>
       <td align="center" colspan="2"><strong>Delivered To:</strong><br>Prof. Khaled Wassif<br>TA. Ibrahim Ali Mohamed</td>
@@ -29,7 +29,7 @@ Operating Systems Course (Spring 2023)
 
 ### Description
 
-Given N numbers and one file, our system simulates a real-life scenario of how buffering is run where a user will decide N to get the prime numbers from 0 to N. Somehow, the producer schedules the primes in a queue, and the consumer will use this queue to write them in the file. The application should use multiple threads to perform multiple actions simultaneously, reducing the time elapsed. 
+Given `N` numbers and one file, our system simulates a real-life scenario of how buffering is run where a user will decide N to get the prime numbers from `0` to `N`. Somehow, the producer schedules the primes in a queue, and the consumer will use this queue to write them in the file. The application should use multiple threads to perform multiple actions simultaneously, reducing the time elapsed. 
 
 Note: The Consumer thread will hold a lock when it starts and release it when the ready queue is empty and must notify all other threads.
 
