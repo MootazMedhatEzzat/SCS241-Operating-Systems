@@ -21,7 +21,7 @@
 
 ---
 
-## Assignment #2
+## 📝 Assignment #2
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
@@ -29,7 +29,7 @@ Operating Systems Course (Spring 2023)
 
 ---
 
-### CPU Schedulers Simulator
+### 📄 CPU Schedulers Simulator
 
 Write a Java program to simulate the following schedulers:
 
@@ -75,7 +75,7 @@ Execution Order:
 0    4    7    9    12   15   18   20   26   33   35   38
 ```
 
-### Program Input
+### 🔢 Program Input
 - Number of processes
 - Round robin Time Quantum
 - Context switching
@@ -86,7 +86,7 @@ For each process, you need to receive the following parameters from the user:
 - Process Burst Time
 - Process Priority
 
-### Program Output
+### 🖥️ Program Output
 For each scheduler, output the following:
 - Processes execution order
 - Waiting Time for each process
@@ -95,7 +95,7 @@ For each scheduler, output the following:
 - Average Turnaround Time
 - Print all history updates of quantum time for each process (AG Scheduling)
 
-### Grading Criteria (BOUNS (15 grades))
+### 🏆 Grading Criteria (BOUNS (15 grades))
 
 |                                    | Preemptive Shortest-Job First (SJF) Scheduling | Round Robin (RR) Scheduling | Priority Scheduling | AG Scheduling | Grade |
 |------------------------------------|-----------------------------------------------|-----------------------------|---------------------|---------------|-------|
@@ -106,3 +106,42 @@ For each scheduler, output the following:
 | **Average Turnaround Time**        | 2                                             | 2                           | 2                   | 4             | 10    |
 | **Print All History Update of Quantum Time for Each Process** | 0                    | 0                           | 0                   | 8             | 8     |
 | **Grade**                          | **18**                                        | **18**                      | **18**              | **46**        | **100**|
+
+### 🛠️ Programming Language and Development Tools Used
+
+<table align="center" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Programming Language</th>
+      <th>Development Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" title="Eclipse" alt="Eclipse" width="40" height="40"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        Java
+      </td>
+      <td align="center">
+        Eclipse IDE for Java Developers
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## 💬 Let's Connect
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! As a Software Engineer, I'm always open to tackling new challenges, sharing knowledge, and growing through collaborative opportunities.
+
+**Mootaz Medhat Ezzat Abdelwahab**  
+🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mootaz-medhat-ezzat-abdelwahab-377a60244)
