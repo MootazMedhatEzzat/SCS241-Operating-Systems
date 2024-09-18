@@ -21,15 +21,15 @@
 
 ---
 
-## Assignment #1 (Deadline 18/11/2022)
+## 📝 Assignment #1 (Deadline 18/11/2022)
 
 Cairo University  
 Faculty of Computers and Artificial Intelligence  
 Operating Systems Course (Spring 2023)
 
-### Description
+### 📄 Description
 
-Given `N` numbers and one file, our system simulates a real-life scenario of how buffering is run where a user will decide N to get the prime numbers from `0` to `N`. Somehow, the producer schedules the primes in a queue, and the consumer will use this queue to write them in the file. The application should use multiple threads to perform multiple actions simultaneously, reducing the time elapsed. 
+Given N numbers and one file, our system simulates a real-life scenario of how buffering is run where a user will decide N to get the prime numbers from 0 to N. Somehow, the producer schedules the primes in a queue, and the consumer will use this queue to write them in the file. The application should use multiple threads to perform multiple actions simultaneously, reducing the time elapsed. 
 
 Note: The Consumer thread will hold a lock when it starts and release it when the ready queue is empty and must notify all other threads.
 
@@ -37,13 +37,42 @@ Note: The Consumer thread will hold a lock when it starts and release it when th
   <img src="https://github.com/user-attachments/assets/85490796-7f70-4e9a-aec0-2ea06f380d99" alt="image">
 </div>
 
-### Submission Instructions
+### 📤 Submission Instructions
 
-1. Submission deadline: 18/11.
-2. The assignment is to be submitted in groups of a minimum of 3 and a maximum of 4 persons.
-3. Do not use built-in semaphores.
+- Submission deadline: 18/11.
+- The assignment is to be submitted in groups of a minimum of 3 and a maximum of 4 persons.
+- Do not use built-in semaphores.
 
-### Grading Criteria
+### 🛠️ Programming Language and Development Tools Used
+
+<table align="center" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Programming Language</th>
+      <th>Development Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        Java
+      </td>
+      <td align="center">
+        Eclipse IDE for Java Developers
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" title="Eclipse" alt="Eclipse" width="40" height="40"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### 🏆 Grading Criteria
 
 <div align="center">
   <table width="50%">
@@ -85,3 +114,14 @@ Note: The Consumer thread will hold a lock when it starts and release it when th
     </tr>
   </table>
 </div>
+
+---
+
+## 💬 Let's Connect
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! I'm always open to new challenges and opportunities to grow as a developer.
+
+**Mootaz Medhat Ezzat Abdelwahab**  
+🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mootaz-medhat-ezzat-abdelwahab-377a60244)
+
