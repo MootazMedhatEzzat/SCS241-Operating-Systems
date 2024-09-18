@@ -43,35 +43,6 @@ Note: The Consumer thread will hold a lock when it starts and release it when th
 - The assignment is to be submitted in groups of a minimum of 3 and a maximum of 4 persons.
 - Do not use built-in semaphores.
 
-### 🛠️ Programming Language and Development Tools Used
-
-<table align="center" border="1" cellpadding="10">
-  <thead>
-    <tr>
-      <th>Programming Language</th>
-      <th>Development Tool</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">
-        Java
-      </td>
-      <td align="center">
-        Eclipse IDE for Java Developers
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>
-      </td>
-      <td align="center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" title="Eclipse" alt="Eclipse" width="40" height="40"/>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### 🏆 Grading Criteria
 
 <div align="center">
@@ -115,10 +86,39 @@ Note: The Consumer thread will hold a lock when it starts and release it when th
   </table>
 </div>
 
+### 🛠️ Programming Language and Development Tools Used
+
+<table align="center" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Programming Language</th>
+      <th>Development Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="Java" width="40" height="40"/>
+      </td>
+      <td align="center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" title="Eclipse" alt="Eclipse" width="40" height="40"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        Java
+      </td>
+      <td align="center">
+        Eclipse IDE for Java Developers
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ---
 
 ## 💬 Let's Connect
-Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! I'm always open to new challenges and opportunities to grow as a developer.
+Feel free to reach out to me if you'd like to collaborate on a project or discuss technology! I'm always open to new challenges and opportunities to grow as a Software Engineer.
 
 **Mootaz Medhat Ezzat Abdelwahab**  
 🎓 Software Engineering Graduate | Faculty of Computers and Artificial Intelligence, Cairo University  
