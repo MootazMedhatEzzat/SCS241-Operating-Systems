@@ -86,6 +86,8 @@ Note: The Consumer thread will hold a lock when it starts and release it when th
   </table>
 </div>
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
