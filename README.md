@@ -107,6 +107,8 @@ For each scheduler, output the following:
 | **Print All History Update of Quantum Time for Each Process** | 0                    | 0                           | 0                   | 8             | 8     |
 | **Grade**                          | **18**                                        | **18**                      | **18**              | **46**        | **100**|
 
+---
+
 ### 🛠️ Programming Language and Development Tools Used
 
 <table align="center" border="1" cellpadding="10">
